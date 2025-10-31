@@ -7,6 +7,11 @@ on:
     branches: [ "main" ]
 
   workflow_dispatch:
+    inputs:
+      message:
+        description: The text to write into the file
+        required: true
+        default: "Hello from DevOps course!"
 
 jobs:
   build:
