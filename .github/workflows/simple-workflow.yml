@@ -16,6 +16,9 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello, world! >> textfile.txt
+
+      - name: Read file was creaated
+        run: cat textfile.txt
         
       - name: Upload generated file
         uses: actions/upload-artifact@v4
