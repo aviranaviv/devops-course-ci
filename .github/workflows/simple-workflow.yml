@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run a one-line script
-        run: echo Hello, world! >> textfile.txt
+        run: echo "${{ github.event.inputs.message }}" > textfile.txt
 
       - name: Read file was creaated
         run: cat textfile.txt
