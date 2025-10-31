@@ -24,6 +24,9 @@ jobs:
 
       - name: Read file was creaated
         run: cat textfile.txt
+
+      - name: print disk space
+        run: df -h
         
       - name: Upload generated file
         uses: actions/upload-artifact@v4
