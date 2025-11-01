@@ -1,17 +1,14 @@
 name: first-work-flow
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
   workflow_dispatch:
     inputs:
       message:
         description: The text to write into the file
         required: true
         default: "Hello from DevOps course!"
+  schedule:
+    - cron: 0 6 * * 0-4
 
 jobs:
   build:
